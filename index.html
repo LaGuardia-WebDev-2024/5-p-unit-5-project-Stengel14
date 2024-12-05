@@ -16,17 +16,106 @@ Select ONE Additional Feature to Add
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <style>
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
 
-  </style>
-</head>
-<body>
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
 
- 
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
 
-</body>
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
+
+      .first-sentence {
+        color: red;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shao's Birthday</h1>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg"
+            alt="Avatar"
+            style="width: 300px; height: 300px"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1>Shao's Birthday</h1>
+          <p>Escape room and food after</p>
+          <p>Sunday, Nov. 24th</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="Info">
+      <p>
+        <span class="first-sentence">
+          Shao's birthday party will be at 3:30 on Sunday, Nov.24th.</span
+        >
+        Try and be there at least five minutes before 3:30, even more than five
+        minutes is good. After the escape room, we will be getting food around
+        the area. It's most likely going to be chinese food, possibly a chicken
+        place.
+      </p>
+    </div>
+
+    <p>
+      This is where we would get food</p>
+      <img src="https://images.squarespace-cdn.com/content/v1/53cc1616e4b0f4361f8ace24/1481472963422-ZAGFF1FZ52SU81G8R2MH/image-asset.jpeg" width="210" />
+    
+
+    <p>
+      This is where the escape room is located </p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyuRgMpySK1Dbt_tN9RhWy2ruDv3q8ISXtPQ&s" width="250" />
+    
+    <p>
+      We will also get dessert if we all want
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Desserts.jpg/640px-Desserts.jpg" width="250" />
+  </body>
 </html>
